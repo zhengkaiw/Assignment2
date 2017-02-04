@@ -1,3 +1,7 @@
+/*
+score: 7.5 + 1(extra credit)
+Great Job! Be careful with corner cases
+*/
 package test;
 /**
  * Created by Rose on 1/21/17.
@@ -48,7 +52,7 @@ public class Assignment2 {
      * If the salary is less than or equal to 8900, the Social Security Tax is 6.2% of the salary.
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
-    public double socialSecurityTax(Employee employee) {
+    public double socialSecurityTax(Employee employee) {                       //correct
         //write your code here
 
         double sst;
@@ -67,7 +71,7 @@ public class Assignment2 {
      * If the employee is under 35, rate is 3% of salary; if the employee is between 35 and 50(inclusive), rate is 4% of salary;
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60, rate is 6% of salary.
      */
-    public double insuranceCoverage(Employee employee) {
+    public double insuranceCoverage(Employee employee) {                                //correct
         //write your code here
 
         double ic;
@@ -90,7 +94,7 @@ public class Assignment2 {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
-    public void sortSalary(Employee e1, Employee e2, Employee e3) {
+    public void sortSalary(Employee e1, Employee e2, Employee e3) {           //the requirment is sort from low to high, but your output is high to low. However, it is still a good piece of code 
         //write your code here
 
         String[] nArray = {e1.name, e2.name, e3.name};
@@ -122,7 +126,7 @@ public class Assignment2 {
      * Do not change the input of this method.
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
-    public void tripleSalary(Employee employee) {
+    public void tripleSalary(Employee employee) {                                     //correct!
         //write your code here
 
         double b = employee.salary;
@@ -135,7 +139,7 @@ public class Assignment2 {
     /**
      * Write a method to determine whether a number is prime
      */
-    public boolean isPrime(int n) {
+    public boolean isPrime(int n) {                                                      //correct
         //write your code here
 
         if (n <= 1) {                                                           //Determine if n larger than 1
@@ -155,7 +159,7 @@ public class Assignment2 {
      * result has only one digit. For example: Given n = 38, the process is
      * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
      */
-    public int addDigits(int n) {
+    public int addDigits(int n) {                                    //miss your corner case: if n is 1, your output is 0, but expected output is 1
         //write your code here
 
         int m = (int)Math.ceil(Math.log10(n));                         //Get the amount of digits of input
@@ -177,7 +181,7 @@ public class Assignment2 {
                     return 1;
                 }
                 m = (int) Math.ceil(Math.log10(s));
-                if (m == 1) {
+                if (m == 1) { 
                     return s;
                 }
                 n = s;
@@ -193,7 +197,7 @@ public class Assignment2 {
      * another prime factor 7. Note that 1 is typically treated as an ugly
      * number.
      */
-    public boolean isUgly(int n) {
+    public boolean isUgly(int n) {                              //miss corner case: when n is a negative number, it is not a ugly number                                    
         //write your code here
 
         if (isPrime(n)){										//Determine if prime number
@@ -244,6 +248,7 @@ public class Assignment2 {
      Swapping x and y will not affected the assignment of a and b. Therefore, a is still assigned to
      Employee "Jenny" and b is still assigned to Employee "John".
     */
+    //excellent answer! Totally correct!
     public static void main(String[] args) {
         Employee a = new Employee("Jenny", 20, Gender.FEMALE, 2000);
         Employee b = new Employee("John", 30, Gender.MALE, 2500);
